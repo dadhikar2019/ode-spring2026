@@ -1,8 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec3-1" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Title</title>
+  <title>Introduction</title>
+  <p>
+    The <m>n^{\text{th}}</m> order linear differential equations are of the form
+    <md xml:id="eq-nonhomogeneous-0" number="yes">
+        a_n(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = f(x)
+    </md>
+  </p>
+  <p>
+    where the functions
+    <m>a_0(x), \dots, a_{n-1}(x), a_n(x)</m>
+    and <m>f(x)</m> are continuous on some interval <m>I</m>.
+  </p>
 
-  <p> Text of section. </p>
+  <p>
+    We say that <xref ref="eq-nonhomogeneous-0"/> is
+    <term>homogeneous</term> on <m>I</m> if <m>f(x)=0</m> for all <m>x</m> in <m>I</m>,
+    and <term>nonhomogeneous</term> on <m>I</m> if <m>f(x)\neq 0</m> for some <m>x</m> in <m>I</m>.
+    We will typically have <m>a_n(x)\neq 0</m> on <m>I</m>.
+  </p>
+
+  <p>
+    If <m>a_n(x)=0</m> for some point in <m>I</m>, we restrict attention to a smaller interval,
+    again denoted <m>I</m>, on which <m>a_n(x)\neq 0</m>.
+    With this assumption, <xref ref="eq-nonhomogeneous-0"/> can be rewritten as
+  <md xml:id="eq-nonhomogeneous0" number="yes">
+      y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = f(x)
+  </md>
+</p>
+  <p>
+    This is achieved by dividing both sides of
+    <xref ref="eq-nonhomogeneous-0"/> by <m>a_n(x)</m>, and redefining the coefficients.
+  </p>
+
+  <definition xml:id="def-solutions">
+    <title>Solution</title>
+    <statement>
+      <p>
+      A function <m>y=\phi(x)</m> defined on <m>I</m> is a
+      <term>solution</term> of <xref ref="eq-nonhomogeneous0"/>
+      if
+    </p>
+    
+    </statement>
+   
+   
+      <me>
+        \phi^{(n)}(x) + a_{n-1}(x)\phi^{(n-1)}(x)
+        + \cdots + a_0(x)\phi(x) = f(x)
+      </me>
+    
+    <p>
+      for all <m>x</m> in <m>I</m>.
+    </p>
+  </definition>
+
+  <remark>
+    <p>In <xref ref="def-solutions"/> we note the following considerations.</p>
+    <ol>
+      <li>
+        Derivatives at endpoints of <m>I</m> are understood as one-sided.
+      </li>
+      <li>
+        Solutions may be complex-valued.
+        If <m>\phi=\phi_1+i\phi_2</m>, then
+          <m>\phi'=\phi_1'+i\phi_2'.</m>
+      </li>
+    </ol>
+  </remark>
+
+
+   <definition xml:id="IVP">
+    <title>Initial Value Problem</title>
+    <p>
+      Let <m>a_0(x),\dots,a_{n-1}(x),f(x)</m> be continuous on <m>I</m>,
+      <m>x_0\in I</m>, and <m>y_0,\dots,y_{n-1}</m> constants.
+      The equation
+    </p>
+      <md>
+        y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_0(x)y = f(x)
+      </md>
+    <p>
+      together with
+    </p>
+      <md>
+        y(x_0)=y_0,\;
+        y'(x_0)=y_1,\dots,
+        y^{(n-1)}(x_0)=y_{n-1}
+      </md>
+    <p>
+      is called an <term>initial value problem (IVP)</term>.
+    </p>
+  </definition>
+
+ <definition xml:id="BVP">
+    <title>Boundary Value Problem</title>
+    <p>
+      Let <m>a_0(x),\dots,a_{n-1}(x),f(x)</m> be continuous on <m>I</m>,
+      <m>x_0,x_1\in I</m>, and <m>y_0,y_1</m> constants.
+      The equation
+    </p>
+      <md>
+        y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_0(x)y = f(x)
+      </md>
+    <p>
+      together with
+    </p>
+      <md>
+        y(x_0)=y_0,\;
+        y(x_1)=y_1
+      </md>
+
+    <p>
+      is called a <term>boundary value problem (BVP)</term>.
+    </p>
+  </definition>
+  
 
 </section>
